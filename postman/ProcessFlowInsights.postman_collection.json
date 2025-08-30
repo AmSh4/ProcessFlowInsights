@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "ProcessFlowInsights",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Analyze",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/path/to/file"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/analyze",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "analyze"]
+        }
+      }
+    }
+  ]
+}

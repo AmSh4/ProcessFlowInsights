@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: processflow-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: processflow
+  template:
+    metadata:
+      labels:
+        app: processflow
+    spec:
+      containers:
+      - name: backend
+        image: yourdockerhub/processflow-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          value: mongodb://mongo-service:27017/processflow
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: processflow-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: processflow-frontend
+  template:
+    metadata:
+      labels:
+        app: processflow-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: yourdockerhub/processflow-frontend:latest
+        ports:
+        - containerPort: 3000

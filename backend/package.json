@@ -1,0 +1,22 @@
+{
+  "name": "processflow-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3",
+    "multer": "^1.4.3",
+    "child_process": "^1.0.2",
+    "swagger-ui-express": "^4.3.1",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}
