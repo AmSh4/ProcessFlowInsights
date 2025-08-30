@@ -31,35 +31,43 @@ Built as a personal project to explore automation technologies, it simulates rea
 - Docker (for containerization)
 - Kubernetes (minikube for local testing)
 
+## Project Structure
+- https://github.com/AmSh4/ProcessFlowInsights/blob/AmSh4-patch-1/Structure.md
+
+
 ## Setup Instructions
 1. **Clone the Repo**:
-git clone https://github.com/yourusername/ProcessFlowInsights.git
-cd ProcessFlowInsights
+   
+    git clone https://github.com/AmSh4/ProcessFlowInsights.git
+    cd ProcessFlowInsights
 
 
-2. **Install Dependencies**:
+3. **Install Dependencies**:
 - Frontend:
-cd frontend
-npm install
+  
+      cd frontend
+      npm install
 - Backend:
-cd backend
-npm install
+  
+      cd backend
+      npm install
 - Python Analysis:
 
-cd analysis_scripts
-pip install -r requirements.txt
+      cd analysis_scripts
+      pip install -r requirements.txt
 
 - Go Microservice:
 
-cd go_parser
-go mod tidy
+      cd go_parser
+      go mod tidy
 
 
 3. **Environment Variables**:
-Create `.env` in backend root:
-MONGO_URI=mongodb://localhost:27017/processflow
-JWT_SECRET=your_secret_key
-PYTHON_SCRIPT_PATH=../analysis_scripts/analyze.py
+ 
+      Create `.env` in backend root:
+      MONGO_URI=mongodb://localhost:27017/processflow
+      JWT_SECRET=your_secret_key
+      PYTHON_SCRIPT_PATH=../analysis_scripts/analyze.py
 
 
 4. **Run Locally**:
@@ -75,14 +83,11 @@ PYTHON_SCRIPT_PATH=../analysis_scripts/analyze.py
 - API Automation: Run `cd tests && python api_automation.py`
 
 6. **Docker Build & Run**:
-docker-compose up
+`docker-compose up`
 
 7. **Kubernetes Deployment**:
 kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
-
-
-## Project Structure
 
 
 ## Usage
